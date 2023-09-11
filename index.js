@@ -10,7 +10,7 @@ app.get("/api", (req, res, next) => {
   return res.status(200).json({
     slack_name: slack_name || "",
     current_day: moment().format("dddd"),
-    utc_time: moment().utc(),
+    utc_time: moment().utc().format("YYYY-MM-DDTHH:mm:ss[Z]"),
     track: track || "",
     github_file_url: "https://github.com/towbee98/hng-x/blob/main/index.js",
     github_repo_url: "https://github.com/towbee98/hng-x",
